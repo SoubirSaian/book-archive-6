@@ -21,7 +21,7 @@ const searchBook = () => {
     }
 
     else{
-        const url = `http://openlibrary.org/search.json?q=${inputText}`;
+        const url = `https://openlibrary.org/search.json?q=${inputText}`;
 
         fetch(url)
         .then(res => res.json())
