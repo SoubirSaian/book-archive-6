@@ -1,4 +1,19 @@
 body{
     margin: 0;
-    background-color: #d1d1e0;
+    /* background-color: #d1d1e0; */
+}
+.display-error{
+    width: 70%;
+    margin: 100px auto;
+    color: brown;
+}
+
+.col-6{
+    margin : 15px 0;
+}
+.hr{
+    height: 10px;
+    width: 80%;
+    margin: 5px auto;
+    color: rgb(226, 43, 43);
 }
