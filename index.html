@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fav icon  -->
+    <link rel="shortcut icon" href="images/1280px-Open_Library_tight_logo.svg.png" type="image/x-icon">
     <title>book-archive</title>
     <!-- bootstrap cdn  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -11,14 +13,25 @@
         <!-- external css file link  -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h1 class="text-center text-primary m-5">Search your book</h1>
-     
+    
+     <!-- search field and button  -->
     <div class="input-group mb-3 w-50 mx-auto">
-        <input id="input-field" type="text" class="form-control  fs-5 p-3" placeholder="search your food..." aria-label="Recipient's username" aria-describedby="button-addon2">
+        <input id="input-field" type="text" class="form-control  fs-5 p-3" placeholder="search your book..." aria-label="Recipient's username" aria-describedby="button-addon2">
 
         <button onclick="searchBook()" class="btn btn-outline-primary fs-5 fw-bold p-3 ms-2" type="button" id="button-submit">Search</button>
 
+      </div>
+
+      <!-- toggle spinner  -->
+      <div id="spinner">
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border text-primary" style="width: 60px; height: 60px;" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
       </div>
 
        <!-- show error message -->
@@ -35,6 +48,7 @@
       <div id="book-detail" class="row">
                
       </div>
+
       
     <!-- external javascript file  -->
     <script src="app.js"></script>

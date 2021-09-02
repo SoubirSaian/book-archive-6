@@ -1,7 +1,16 @@
+// toggle spinner function 
+const toggleSpinner = displayStyle =>{
+    const spinner = document.getElementById('spinner');
+    spinner.style.display = displayStyle;
+}
+ 
 // call api through search result 
 const searchBook = () => {
     const input = document.getElementById('input-field');
     const inputText = input.value;
+
+    // call toggole spinner function 
+    toggleSpinner('block');
     
     input.value = '';
 
@@ -22,16 +31,27 @@ const searchBook = () => {
 
 }
 
+
 // display error messege 
 const displayErrorMessege = error =>{
 
+    // remove previous search result 
+    const  totalSearch = document.getElementById('display-book');
+    totalSearch.textContent = '';
+    const bookDetail = document.getElementById('book-detail');
+    bookDetail.textContent = '';
+
+        // now display error messege 
     const displayError = document.getElementById('error');
     displayError.textContent = '';
     const h2 = document.createElement('h2');
     h2.classList.add('display-error');
     h2.innerText=`${error}`;
     displayError.appendChild(h2);
+
+    toggleSpinner('none');
 }
+
 
 // displayTotalSearchResult function 
 const displayTotalSearchResult = number =>{
@@ -44,6 +64,7 @@ const displayTotalSearchResult = number =>{
  
     totalSearch.appendChild(h3);
 }
+
 
 // display book details through forEach and display total search result 
 const displayBooks = books => {
@@ -63,6 +84,7 @@ const displayBooks = books => {
     }
 
     else{
+        // remove previous error messege if exists 
         const displayError = document.getElementById('error');
         displayError.textContent = '';
 
@@ -101,6 +123,7 @@ const displayBooks = books => {
             
         }); 
      }
+     toggleSpinner('none');
 
 }
 

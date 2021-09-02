@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    /* background-color: #d1d1e0; */
+    background-color: #d1d1e0;
 }
 .display-error{
     width: 70%;
@@ -16,4 +16,7 @@ body{
     width: 80%;
     margin: 5px auto;
     color: rgb(226, 43, 43);
+}
+#spinner{
+    display: none;
 }
